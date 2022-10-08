@@ -1,0 +1,23 @@
+{
+  "name": "wolf_of_nus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acakebro/Wolf_of_NUS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acakebro/Wolf_of_NUS/issues"
+  },
+  "homepage": "https://github.com/acakebro/Wolf_of_NUS#readme",
+  "devDependencies": {
+    "hardhat": "^2.11.2"
+  }
+}
