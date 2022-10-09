@@ -1,13 +1,4 @@
-import './App.css';
-
-
-
-
-function App() {
-  return (
-    <ConnectButton showBalance={false} />
 import { Nav } from "./components/Nav"
-
 
   function App() {
     return (
