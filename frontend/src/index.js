@@ -1,8 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+import { Home } from './pages/Home';
 
 import '@rainbow-me/rainbowkit/styles.css';
 import {
@@ -37,12 +43,27 @@ const wagmiClient = createClient({
   provider
 })
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <Home />
+    ),
+  },
+  {
+    path: "recommend",
+    element: (
+      <p>yo</p>
+    )
+  }
+]);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider chains={chains}>
-        <App />
+          <RouterProvider router={router} />
       </RainbowKitProvider>
     </WagmiConfig>
   </React.StrictMode>

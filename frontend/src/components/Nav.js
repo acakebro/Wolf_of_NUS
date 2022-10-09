@@ -2,7 +2,7 @@ import {ConnectButton} from '@rainbow-me/rainbowkit';
 
 export const Nav = () => {
     return (
-      <div className="fixed w-full top-0 flex flex-row justify-between items-center px-8 pt-8">
+      <div className="fixed w-full top-0 flex flex-row justify-between items-center px-36 pt-8">
         <div className='text-tprimary'>
           App Name
         </div>
