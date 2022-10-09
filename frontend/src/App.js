@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 
@@ -7,7 +6,15 @@ import './App.css';
 function App() {
   return (
     <ConnectButton showBalance={false} />
-  );
-}
+import { Nav } from "./components/Nav"
 
-export default App;
+
+  function App() {
+    return (
+      <div className='h-screen bg-primary'>
+        <Nav />
+      </div>
+    );
+  }
+
+  export default App;
