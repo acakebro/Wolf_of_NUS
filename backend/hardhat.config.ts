@@ -1,6 +1,6 @@
-
 require("@nomiclabs/hardhat-waffle");
 require("@nomiclabs/hardhat-etherscan");
+require("hardhat-gas-reporter");
 require('dotenv').config();
 
 const { API_URL, PRIVATE_KEY, ETHERSCAN_API } = process.env;
@@ -29,24 +29,6 @@ module.exports = {
         enabled: true,
         runs: 200
       }
-    },
-    overrides: {
-      "contracts/WulfzContracts/Wulfz.sol": {
-        version: "0.8.10",
-        settings: {}
-      },
-      "contracts/WulfzContracts/StakingPool.sol": {
-        version: "0.8.10",
-        settings: {}
-      },
-      "contracts/WulfzContracts/Profile.sol": {
-        version: "0.8.10",
-        settings: {}
-      },
-      "contracts/WulfzContracts/WulfzAwoo.sol": {
-        version: "0.8.10",
-        settings: {}
-      },
     }
   },
   networks: {
@@ -55,7 +37,14 @@ module.exports = {
       accounts: [PRIVATE_KEY]
     }
   },
+  gasReporter: {
+    enabled: true,
+    currency: "USD",
+  },
   etherscan: {
     apiKey: ETHERSCAN_API
-  }
+  },
+  paths : {
+    artifacts: "./contracts"
+  },
 };

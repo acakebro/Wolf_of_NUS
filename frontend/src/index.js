@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 
 import { Home } from './pages/Home';
+import { App } from './pages/App'
 
 import '@rainbow-me/rainbowkit/styles.css';
 import {
@@ -22,13 +23,11 @@ import {
   WagmiConfig,
 } from 'wagmi';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
-import { publicProvider } from 'wagmi/providers/public';
 
 const { chains, provider } = configureChains(
-  [chain.goerli],
+  [chain.goerli,],
   [
     alchemyProvider({ apiKey: process.env.ALCHEMY_ID }),
-    publicProvider()
   ]
 );
 
@@ -51,9 +50,9 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "recommend",
+    path: "app",
     element: (
-      <p>yo</p>
+      <App />
     )
   }
 ]);
